@@ -24,11 +24,12 @@
     "baseUrl": "./",
     "paths": {
       "@atoms/*": ["src/components/atoms/*"],
-      "@icons/*": ["src/assets/icons/*"],
       "@molecules/*": ["src/components/molecules/*"],
       "@organisms/*": ["src/components/organisms/*"],
       "@templates/*": ["src/components/templates/*"],
-      "@context/*": ["src/context/*"]
+      "@context/*": ["src/context/*"],
+      
+      "@icons/*": ["src/assets/icons/*"]
     }
   },
 

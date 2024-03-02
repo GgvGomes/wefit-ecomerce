@@ -13,19 +13,33 @@ export default defineConfig({
     alias: [
       // { find: "@assets/*", replacement: resolve(__dirname, "src/assets/*") },
 
-      // {
-      //   find: "@molecules/*",
-      //   replacement: resolve(__dirname, "src/components/molecules/*"),
-      // },
-      // {
-      //   find: "@organisms/*",
-      //   replacement: resolve(__dirname, "src/components/organisms/*"),
-      // },
+      {
+        find: "@atoms/*",
+        replacement: resolve(__dirname, "src/components/atoms/*"),
+      },
+      {
+        find: "@molecules/*",
+        replacement: resolve(__dirname, "src/components/molecules/*"),
+      },
+      {
+        find: "@organisms/*",
+        replacement: resolve(__dirname, "src/components/organisms/*"),
+      },
       {
         find: "@templates",
         replacement: resolve(__dirname, "src/components/templates"),
       },
-      // { find: "@context/*", replacement: resolve(__dirname, "src/context/*") },
+      
+      {
+        find: "@context",
+        replacement: resolve(__dirname, "src/context"),
+      },
+
+      {
+        find: "@icons",
+        replacement: resolve(__dirname, "src/assets/icons"),
+      },
+      
     ],
   },
 });
