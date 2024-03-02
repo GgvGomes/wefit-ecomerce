@@ -1,13 +1,11 @@
-
-
-
+import { MainPage } from "@templates/main";
 
 function App() {
   return (
-    <>
-      <h1>Hello World!</h1>
-    </>
-  )
+    <MainPage>
+      <>Hello World</>
+    </MainPage>
+  );
 }
 
-export default App
+export default App;
