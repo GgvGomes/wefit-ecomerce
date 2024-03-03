@@ -8,6 +8,8 @@ export const HeaderGrid = styled.div`
   width: ${({ theme }) => theme.width};
   height: 70px; // == 8.75%
 
+  margin-bottom: 28px;
+
   border: 1px solid red;
 
   padding: ${({ theme }) => theme.padding};

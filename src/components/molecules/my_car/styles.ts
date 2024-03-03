@@ -6,11 +6,9 @@ export const MyCarGrid = styled.div`
   gap: 8px;
 `;
 
-export const FlexContent = styled.div<{
-  flex: "row" | "column";
-}>`
-  display: flex;
-  flex-direction: ${({ flex }) => (flex === "column" ? "column" : "row")};
+export const FlexContent = styled.div`
+display: flex;
+  flex-direction: column;
   text-align: end;
 `;
 
