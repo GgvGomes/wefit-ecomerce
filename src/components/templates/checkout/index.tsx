@@ -11,9 +11,10 @@ export function Checkout() {
         <span>SUBTOTAL</span>
       </HeaderTable>
 
-      <ProductCheckout />
-
-      <Divider />
+      <>
+        <ProductCheckout />
+        <Divider />
+      </>
 
       <Footer>
         <ButtonElement width="235.42px" height="40px">
