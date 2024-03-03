@@ -1,38 +1,51 @@
-O desafio consiste na criação de um site de e-commerce simplificado do zero, onde o candidato terá que criar um fluxo com três módulos/telas.
 
-São elas:
+# WeFit E-Commerce
 
-Home: Onde ele terá que fazer uma requisição na API, trazendo assim, a lista de filmes quem podem ser adicionados ao carrinho.
-Carrinho: Onde ele poderá ver os itens que foram adicionados, somando o valor total com base em cada item adicionado, podendo remover um item do carrinho. Por padrão, se o carrinho tiver nenhum item adicionado, deverá aparecer a tela de empty com a opção de voltar para tela inicial.
-Compra realizada: Após confirmar o pedido na tela anterior, o usuário deverá ser encaminhado para a tela de pedido confirmado. Aqui o usuário também terá a opção de voltar para tela inicial.
-[Versão 1o teste]
+Esse repositório é um simples e-commerce. O produto útilizado foram filmes.
 
-Protótipo do Figma
+Para você ter esse projeto rodando na sua máquina basta seguir o passo a passo:
 
-*Obs: os assets podem ser exportados do próprio Figma.
+```
+    $ git clone https://github.com/GgvGomes/wefit-ecomerce.git
 
-Sobre a API
+    $ cd ./wefit-ecomerce
 
-Para o desafio, simularemos uma API, onde o candidato poderá baixar o .json com a lista de objetos aqui:
+    $ npm i 
 
-Para simular um servidor, recomendamos que o candidato utilize o json-server. Se preferir outra biblioteca, pode ficar à vontade para utilizar. 😄
+```
 
-Se possível, inclua o comando para iniciar o servidor da API no package.json do projeto.
+Para você rodar o projeto é necessário rodar o servidor mock, para depois rodar a aplicação:
 
-Avaliação
-Peso: 8 de 10;
-Pontos avaliados:
-Fidelidade do layout do Figma;
-Funcionamento da aplicação (ausência de bugs);
-Qualidade do código:
-Organização das pastas;
-Domínio do TypeScript;
-Domínio do styled-components;
-Bom nível de Componentização;
-Aplicação de tecnologias;
-Ex: aplicar uma biblioteca específica que acelere o desenvolvimento.
-Aplicação das melhores práticas para isolar comportamento de UI da lógica de Integração;
-Código legível e de fácil manutenção;
-Ex: variáveis com nomes claros.
-Código limpo
-Ex: evitar console.log ou códigos desnecessários.
+```
+    $ npm run server
+
+    $ npm run dev
+```
+
+Dessa forma você poderá visualizar o projeto abrindo a seguinte url no seu navegador: http://localhost:5173/
+
+## Using:
+
+Essa aplicação foi construída utilizando: React, TypeScript, Styled-Component, Json-Server, React-Router-Dom e Vite.
+
+<p align="center">
+ <a href="#">React</a> • 
+ <a href="#">Vite</a> • 
+ <a href="#">Front-end</a> • 
+ <a href="#">Styled-Components</a> • 
+ <a href="#">TypeScript</a> 
+</p>
+
+<p align="center">
+  <a href="#autor">Mrs. Gomes</a>
+</p>
+
+<br/><br/>
+<h4 align="center"> 
+	 React Application 🚀🔥
+</h4>
+
+
+
+
+
