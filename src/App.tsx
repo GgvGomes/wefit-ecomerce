@@ -3,6 +3,7 @@ import { Header } from "@organisms/header";
 import { MainPage } from "@templates/main";
 import { NotFound } from "@templates/not_found";
 import { Products } from "@templates/products";
+import { PurchaseCompleted } from "@templates/purchase_completed";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
 
         {/* Router */}
         {/* <Products /> */}
-        <NotFound />
+        {/* <NotFound /> */}
+        {/* <PurchaseCompleted /> */}
       </MainPage>
     </ProductsContextProvider>
   );

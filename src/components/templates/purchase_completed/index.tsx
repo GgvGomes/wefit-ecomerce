@@ -1,10 +1,10 @@
 import { NotifyCustomer } from "@organisms/notify_customer";
 
-export function NotFound() {
+export function PurchaseCompleted() {
   return (
     <NotifyCustomer
-      text="Parece que não há nada por aqui :("
-      src="/not_found.png"
+      text="Compra realizada com sucesso!"
+      src="/purchase_completed.png"
       to=""
     />
   );
