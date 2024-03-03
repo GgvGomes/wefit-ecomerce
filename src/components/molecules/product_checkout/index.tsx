@@ -7,28 +7,38 @@ import {
   Product,
 } from "./styles";
 import { TrashIcon } from "@icons/trash";
+import { IProductsCar, useProductContext } from "@context/products";
 
-export function ProductCheckout() {
+export function ProductCheckout({ id, image, price, quantity, title }: IProductsCar) {
+  const { removeItemCar } = useProductContext();
+
   return (
     <Product>
       <ContentImageName>
-        <img
-          src="https://wefit-react-web-test.s3.amazonaws.com/spider-man.png"
-          alt="Product Image"
-        />
+        <img src={image} alt="Product Image" />
 
         <NamePrice>
-          <span>Homem Aranha</span>
-          <Price>R$ 29,90</Price>
+          <span>{title}</span>
+          <Price>
+            {price.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          </Price>
         </NamePrice>
       </ContentImageName>
 
-      <InputNumber defaultValue={1} id={1} />
+      <InputNumber defaultValue={quantity} id={id} />
 
       <ContentValueRemove>
-        <Price>R$ 29,90</Price>
+        <Price>
+          {price.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}
+        </Price>
 
-        <TrashIcon />
+        <TrashIcon onClick={() => removeItemCar(id)} />
       </ContentValueRemove>
     </Product>
   );

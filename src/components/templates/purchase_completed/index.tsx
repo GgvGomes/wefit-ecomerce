@@ -5,7 +5,7 @@ export default function PurchaseCompleted() {
     <NotifyCustomer
       text="Compra realizada com sucesso!"
       src="/purchase_completed.png"
-      to=""
+      to="/"
     />
   );
 }

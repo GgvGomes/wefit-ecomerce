@@ -10,11 +10,6 @@ function App() {
       <MainPage>
         <Header />
 
-        {/* Router */}
-        {/* <Products /> */}
-        {/* <NotFound /> */}
-        {/* <PurchaseCompleted /> */}
-        {/* <Checkout /> */}
         <Outlet />
       </MainPage>
     </ProductsContextProvider>

@@ -4,10 +4,19 @@ export const MyCarGrid = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
+
+  svg {
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
 `;
 
 export const FlexContent = styled.div`
-display: flex;
+  display: flex;
   flex-direction: column;
   text-align: end;
 `;
@@ -18,6 +27,13 @@ export const SpanCar = styled.span`
   line-height: 19px;
   text-align: right;
   width: fit-content;
+
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    scale: 1.05;
+  }
 `;
 
 export const ItensCar = styled.span`

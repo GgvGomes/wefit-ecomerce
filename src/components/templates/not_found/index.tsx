@@ -5,7 +5,7 @@ export default function NotFound() {
     <NotifyCustomer
       text="Parece que não há nada por aqui :("
       src="/not_found.png"
-      to=""
+      to="/"
     />
   );
 }

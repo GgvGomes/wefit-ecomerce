@@ -1,6 +1,6 @@
 import { ButtonElement } from "src/components/atomics/button";
 import { Container, Span } from "./styles";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface INotifyCustomerProps {
   text: string;
@@ -8,13 +8,10 @@ interface INotifyCustomerProps {
   to: string;
 }
 
-export function NotifyCustomer({src, text, to}: INotifyCustomerProps) {
-  // const navigate = useNavigate();
+export function NotifyCustomer({ src, text, to }: INotifyCustomerProps) {
+  const navigate = useNavigate();
 
-  const onClick = () => {
-    // navigate(to);
-    console.log(to);
-  }
+  const onClick = () => navigate(to);
 
   return (
     <Container>

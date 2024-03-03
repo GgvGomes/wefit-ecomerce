@@ -1,8 +1,20 @@
 import { ButtonElement } from "src/components/atomics/button";
 import { Container, Divider, Footer, FooterValue, HeaderTable, Value } from "./styles";
 import { ProductCheckout } from "@molecules/product_checkout";
+import { useProductContext } from "@context/products";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Checkout() {
+  const { myCar, resetMyCar } = useProductContext(),
+    navigate = useNavigate(),
+    itensValue = myCar.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
+  const handleCheckout = () => {
+    navigate("/finish");
+    resetMyCar();
+  };
+
   return (
     <Container>
       <HeaderTable>
@@ -11,19 +23,26 @@ export default function Checkout() {
         <span>SUBTOTAL</span>
       </HeaderTable>
 
-      <>
-        <ProductCheckout />
-        <Divider />
-      </>
+      {myCar.map((product) => (
+        <React.Fragment key={product.id}>
+          <ProductCheckout {...product} />
+          <Divider />
+        </React.Fragment>
+      ))}
 
       <Footer>
-        <ButtonElement width="235.42px" height="40px">
+        <ButtonElement width="235.42px" height="40px" onClick={handleCheckout}>
           FINALIZAR PEDIDO
         </ButtonElement>
 
         <FooterValue>
           <span>TOTAL</span>
-          <Value>R$ 29,90</Value>
+          <Value>
+            {itensValue.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          </Value>
         </FooterValue>
       </Footer>
     </Container>

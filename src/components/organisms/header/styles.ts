@@ -21,4 +21,11 @@ export const Title = styled.h1`
   line-height: 27px;
   letter-spacing: 0em;
   text-align: left;
+
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    scale: 1.1;
+  }
 `;

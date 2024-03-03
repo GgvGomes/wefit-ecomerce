@@ -21,6 +21,7 @@ interface MoviesContextData {
   addItemCar: (id: number) => void;
   removeItemCar: (id: number) => void;
   decreaseQuantity: (id: number) => void;
+  resetMyCar: () => void;
 }
 
 const ProductsContext = createContext<MoviesContextData>({} as MoviesContextData);
@@ -68,6 +69,10 @@ export const ProductsContextProvider = ({ children }: React.PropsWithChildren) =
     [myCar]
   );
 
+  const resetMyCar = useCallback(() => {
+    setProducts([]);
+  }, []);
+
   useEffect(() => {
     setIsLoading(true);
 
@@ -89,6 +94,7 @@ export const ProductsContextProvider = ({ children }: React.PropsWithChildren) =
         addItemCar,
         removeItemCar,
         decreaseQuantity,
+        resetMyCar,
       }}>
       {children}
     </ProductsContext.Provider>
