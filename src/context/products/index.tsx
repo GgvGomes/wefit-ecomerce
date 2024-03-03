@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useState } from "react";
 
 export interface IProduct {
   id: number;
@@ -13,6 +13,9 @@ interface MoviesContextData {
   products: IProduct[];
   myCar: IProduct[];
   setMyCar: React.Dispatch<React.SetStateAction<IProduct[]>>;
+
+  addItemCar: (id: number) => void;
+  removeItemCar: (id: number) => void;
 }
 
 const ProductsContext = createContext<MoviesContextData>({} as MoviesContextData);
@@ -21,6 +24,25 @@ export const ProductsContextProvider = ({ children }: React.PropsWithChildren) =
   const [myCar, setMyCar] = useState<IProduct[]>([]);
   const [products, setProducts] = useState<IProduct[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const addItemCar = useCallback(
+    (id: number) => {
+      const productAdded = products.find((p) => p.id === id);
+
+      if (myCar.find((p) => p.id === id)) return;
+      else if (productAdded) setMyCar([...myCar, productAdded]);
+    },
+    [products, myCar]
+  );
+
+  const removeItemCar = useCallback(
+    (id: number) => {
+      const productRemoved = myCar.find((p) => p.id === id);
+      if (productRemoved) setMyCar(myCar.filter((p) => p.id !== id));
+      else return;
+    },
+    [myCar]
+  );
 
   useEffect(() => {
     setIsLoading(true);
@@ -40,6 +62,8 @@ export const ProductsContextProvider = ({ children }: React.PropsWithChildren) =
         myCar,
         products,
         setMyCar,
+        addItemCar,
+        removeItemCar,
       }}>
       {children}
     </ProductsContext.Provider>
