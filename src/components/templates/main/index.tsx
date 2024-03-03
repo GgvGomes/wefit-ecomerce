@@ -9,7 +9,10 @@ export const MainPage = styled.div`
   width: 100vw;
   height: 100vh;
 
+  padding: 0 calc((100vw - 960px) / 2);
+
   background-color: #2f2e41;
 
   overflow: auto;
 `;
+

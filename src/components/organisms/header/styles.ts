@@ -5,7 +5,7 @@ export const HeaderGrid = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  width: ${({ theme }) => theme.width};
+  width: 100%;
   height: 70px; // == 8.75%
 
   margin-bottom: 28px;

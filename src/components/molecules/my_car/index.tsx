@@ -1,4 +1,4 @@
-import { BuyCarIcon } from "@icons/buy_car";
+import { ShoppingBagIcon } from "@icons/shopping_bag";
 import { FlexContent, ItensCar, MyCarGrid, SpanCar } from "./styles";
 
 export function MyCar() {
@@ -9,7 +9,7 @@ export function MyCar() {
         <ItensCar>0 itens</ItensCar>
       </FlexContent>
 
-      <BuyCarIcon />
+      <ShoppingBagIcon />
     </MyCarGrid>
   );
 }
