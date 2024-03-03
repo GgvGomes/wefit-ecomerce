@@ -70,7 +70,7 @@ export const ProductsContextProvider = ({ children }: React.PropsWithChildren) =
   );
 
   const resetMyCar = useCallback(() => {
-    setProducts([]);
+    setMyCar([]);
   }, []);
 
   useEffect(() => {

@@ -1,14 +1,37 @@
+import { breakPoints } from "@context/styles/breake_points";
 import styled from "styled-components";
 
 export const Quantity = styled.div`
   display: flex;
   align-items: center;
   gap: 11px;
-  
+
   width: 20%;
 
   svg {
     cursor: pointer;
+  }
+
+  &.mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: ${breakPoints.sm}px) {
+    &:not(.mobile) {
+      display: none;
+    }
+
+    &.mobile {
+      display: flex;
+      width: 117px;
+      height: 26px;
+
+      svg {
+        display: initial;
+      }
+
+      height: 26px;
+    }
   }
 `;
 
@@ -23,4 +46,8 @@ export const InputNumberStyled = styled.input`
 
   cursor: default;
   background-color: transparent;
+
+  @media only screen and (max-width: ${breakPoints.sm}px) {
+    width: 50%;
+  }
 `;

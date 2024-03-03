@@ -7,9 +7,10 @@ import { useProductContext } from "@context/products";
 interface IInputNumberProps {
   defaultValue: number;
   id: number;
+  className?: string;
 }
 
-export function InputNumber({ defaultValue, id }: IInputNumberProps) {
+export function InputNumber({ defaultValue, id, className }: IInputNumberProps) {
   const [quantity, setQuantity] = useState(defaultValue),
     { addItemCar, decreaseQuantity } = useProductContext();
 
@@ -23,7 +24,7 @@ export function InputNumber({ defaultValue, id }: IInputNumberProps) {
   };
 
   return (
-    <Quantity>
+    <Quantity className={className}>
       {/* Decrease */}
       <LessIcon onClick={decrement} />
       {/* Input */}

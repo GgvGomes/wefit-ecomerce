@@ -1,5 +1,5 @@
 import { ButtonElement } from "src/components/atomics/button";
-import { Container, Divider, Footer, FooterValue, HeaderTable, Value } from "./styles";
+import { Container, ContainerProducts, Divider, Footer, FooterValue, HeaderTable, Value } from "./styles";
 import { ProductCheckout } from "@molecules/product_checkout";
 import { useProductContext } from "@context/products";
 import React from "react";
@@ -23,14 +23,18 @@ export default function Checkout() {
         <span>SUBTOTAL</span>
       </HeaderTable>
 
-      {myCar.map((product) => (
-        <React.Fragment key={product.id}>
-          <ProductCheckout {...product} />
-          <Divider />
-        </React.Fragment>
-      ))}
+      <ContainerProducts>
+        {myCar.map((product) => (
+          <React.Fragment key={product.id}>
+            <ProductCheckout {...product} />
+            <Divider />
+          </React.Fragment>
+        ))}
+      </ContainerProducts>
 
       <Footer>
+        <Divider className="mobile" />
+
         <ButtonElement width="235.42px" height="40px" onClick={handleCheckout}>
           FINALIZAR PEDIDO
         </ButtonElement>
@@ -44,6 +48,14 @@ export default function Checkout() {
             })}
           </Value>
         </FooterValue>
+
+        <ButtonElement
+          className="mobile"
+          width="235.42px"
+          height="40px"
+          onClick={handleCheckout}>
+          FINALIZAR PEDIDO
+        </ButtonElement>
       </Footer>
     </Container>
   );

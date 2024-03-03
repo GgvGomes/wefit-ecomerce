@@ -11,6 +11,7 @@ export const MainPage = styled.div`
   height: 100vh;
 
   padding: 0 calc((100vw - 960px) / 2);
+  padding-bottom: 2vh!important;
 
   background-color: #2f2e41;
 

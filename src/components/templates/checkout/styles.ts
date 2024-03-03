@@ -1,10 +1,9 @@
+import { breakPoints } from "@context/styles/breake_points";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  /* width: 950px; */
   width: calc(100% - 10px);
   margin: 0 auto;
-  /* height: Hug (286px) */
   height: auto;
 
   padding: 24px;
@@ -16,10 +15,15 @@ export const Container = styled.div`
   gap: 21px;
 
   background-color: #fff;
+
+  @media only screen and (max-width: ${breakPoints.sm}px) {
+    width: 100%;
+    height: 90vh;
+    justify-content: space-between;
+  }
 `;
 
 export const HeaderTable = styled.div`
-  /* width: 691px; */
   width: 100%;
   height: 20px;
 
@@ -45,6 +49,19 @@ export const HeaderTable = styled.div`
   :first-child {
     width: 40%;
   }
+
+  @media only screen and (max-width: ${breakPoints.sm}px) {
+    display: none;
+  }
+`;
+
+export const ContainerProducts = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 21px;
 `;
 
 export const Divider = styled.div`
@@ -52,6 +69,20 @@ export const Divider = styled.div`
   height: 1px;
 
   background-color: #999999;
+
+  &.mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: ${breakPoints.sm}px) {
+    &:not(.mobile) {
+      display: none;
+    }
+
+    &.mobile {
+      display: block;
+    }
+  }
 `;
 
 export const Footer = styled.div`
@@ -59,6 +90,26 @@ export const Footer = styled.div`
 
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  button.mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: ${breakPoints.sm}px) {
+    justify-content: flex-end;
+    gap: 16px;
+
+    button:not(.mobile) {
+      display: none;
+    }
+
+    button.mobile {
+      display: initial;
+
+      width: 100%;
+    }
+  }
 `;
 
 export const FooterValue = styled.div`

@@ -8,6 +8,7 @@ import {
 } from "./styles";
 import { TrashIcon } from "@icons/trash";
 import { IProductsCar, useProductContext } from "@context/products";
+import { TrashMobileIcon } from "@icons/trash_mobile";
 
 export function ProductCheckout({ id, image, price, quantity, title }: IProductsCar) {
   const { removeItemCar } = useProductContext();
@@ -30,7 +31,19 @@ export function ProductCheckout({ id, image, price, quantity, title }: IProducts
 
       <InputNumber defaultValue={quantity} id={id} />
 
-      <ContentValueRemove>
+      <NamePrice className="mobile">
+        <span>{title}</span>
+        <Price className="mobile">
+          {price.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}
+        </Price>
+
+        <TrashMobileIcon className="mobile" onClick={() => removeItemCar(id)} />
+      </NamePrice>
+
+      <ContentValueRemove className="mobile">
         <Price>
           {price.toLocaleString("pt-BR", {
             style: "currency",
@@ -38,7 +51,17 @@ export function ProductCheckout({ id, image, price, quantity, title }: IProducts
           })}
         </Price>
 
-        <TrashIcon onClick={() => removeItemCar(id)} />
+        <InputNumber className="mobile" defaultValue={quantity} id={id} />
+
+        <Price className="mobile">
+          <span>SUBTOTAL</span>
+          {(price * quantity).toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}
+        </Price>
+
+        <TrashIcon className="trash" onClick={() => removeItemCar(id)} />
       </ContentValueRemove>
     </Product>
   );
