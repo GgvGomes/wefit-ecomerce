@@ -1,6 +1,7 @@
 import { ProductsContextProvider } from "@context/products";
 import { Header } from "@organisms/header";
 import { MainPage } from "@templates/main";
+import { NotFound } from "@templates/not_found";
 import { Products } from "@templates/products";
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
         <Header />
 
         {/* Router */}
-        <Products />
+        {/* <Products /> */}
+        <NotFound />
       </MainPage>
     </ProductsContextProvider>
   );
