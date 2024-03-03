@@ -16,28 +16,45 @@ export const LoaderContainer = styled.div`
 `;
 
 export const LoaderSpin = styled.div`
+  --border: 0.3rem;
+
   position: relative;
 
-  &::after {
+  width: 3.625rem;
+  height: 3.625rem;
+  border-radius: 50%;
+
+  background: #2f2e41;
+  background-clip: padding-box;
+  border: solid var(--border) transparent;
+
+  &:before {
     content: "";
     position: absolute;
-    z-index: 100;
-    left: 50%;
-    top: 50%;
-    margin: -0.5em 0 0 -0.5em;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
-    width: 62.25px;
-    height: 62.25px;
+    z-index: -1;
 
-    font-size: 1.5em;
-    border-right: 0.1em solid #bbc0ca;
-    /* border-bottom: 0.1em solid #80808000; */
-    border-left: 0.1em solid #80808000;
-    border-top: 0.1em solid #bbc0ca;
-    
-    border-radius: 3em;
-    box-sizing: border-box;
-    animation: spin 1s infinite linear;
-    transition: 1s ease;
+    margin: -0.3rem;
+    border-radius: inherit;
+    background: conic-gradient(
+      from 90deg at 50% 50%,
+      rgba(128, 128, 128, 0.0001) -46.17deg,
+      #ffffff 313.55deg,
+      rgba(128, 128, 128, 0.0001) 313.83deg,
+      #ffffff 673.55deg
+    );
+
+    -webkit-animation: spin 1.5s infinite;
+    animation: spin 1.5s infinite;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
   }
 `;
