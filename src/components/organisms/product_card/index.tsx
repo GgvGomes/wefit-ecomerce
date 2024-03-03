@@ -1,23 +1,34 @@
 import { IProduct } from "@context/products";
-import { Card, CardImage } from "./styles";
+import {
+  Card,
+  CardImage,
+  ContentButton,
+  ImageContainer,
+  InfosContainer,
+  Price,
+} from "./styles";
 import { ButtonElement } from "src/components/atomics/button";
 import { BuyCarIcon } from "@icons/buy_car";
 
 export function ProductCard({ image, title, price }: IProduct) {
   return (
     <Card>
-      <>
-        <CardImage src={image} />
-        {title}
-      </>
+      <InfosContainer>
+        <ImageContainer>
+          <CardImage src={image} />
+          {title}
+        </ImageContainer>
 
-      {price.toString().replace(".", ".")}
+        <Price>R$ {price.toString().replace(".", ",")}</Price>
+      </InfosContainer>
 
-      <ButtonElement width={'100%'}>
-        <>
-        <BuyCarIcon /> 0
-        ADICIONAR AO CARRINHO
-        </>
+      <ButtonElement width={"100%"} height={"40px"}>
+        <ContentButton>
+          <span>
+            <BuyCarIcon /> 0
+          </span>
+          ADICIONAR AO CARRINHO
+        </ContentButton>
       </ButtonElement>
     </Card>
   );

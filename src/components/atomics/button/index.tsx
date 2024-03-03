@@ -3,7 +3,8 @@ import { Button } from "./styles";
 
 interface IButtonProps {
   width: string;
-  height?: number;
+  height?: string;
+  padding?: string;
 }
 
 export function ButtonElement({
