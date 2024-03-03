@@ -2,7 +2,7 @@ import { ButtonElement } from "src/components/atomics/button";
 import { Container, Divider, Footer, FooterValue, HeaderTable, Value } from "./styles";
 import { ProductCheckout } from "@molecules/product_checkout";
 
-export function Checkout() {
+export default function Checkout() {
   return (
     <Container>
       <HeaderTable>

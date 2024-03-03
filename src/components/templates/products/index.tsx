@@ -2,7 +2,7 @@ import { useProductContext } from "@context/products";
 import { ProductsContainer } from "./styles";
 import { ProductCard } from "@organisms/product_card";
 
-export function Products() {
+export default function Products() {
   const { products } = useProductContext();
 
   return (

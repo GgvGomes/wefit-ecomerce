@@ -1,6 +1,6 @@
 import { NotifyCustomer } from "@organisms/notify_customer";
 
-export function NotFound() {
+export default function NotFound() {
   return (
     <NotifyCustomer
       text="Parece que não há nada por aqui :("

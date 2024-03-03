@@ -1,6 +1,6 @@
 import { NotifyCustomer } from "@organisms/notify_customer";
 
-export function PurchaseCompleted() {
+export default function PurchaseCompleted() {
   return (
     <NotifyCustomer
       text="Compra realizada com sucesso!"

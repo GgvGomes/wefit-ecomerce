@@ -1,10 +1,8 @@
 import { ProductsContextProvider } from "@context/products";
 import { Header } from "@organisms/header";
-import { Checkout } from "@templates/checkout";
 import { MainPage } from "@templates/main";
-import { NotFound } from "@templates/not_found";
-import { Products } from "@templates/products";
-import { PurchaseCompleted } from "@templates/purchase_completed";
+
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -16,7 +14,8 @@ function App() {
         {/* <Products /> */}
         {/* <NotFound /> */}
         {/* <PurchaseCompleted /> */}
-        <Checkout />
+        {/* <Checkout /> */}
+        <Outlet />
       </MainPage>
     </ProductsContextProvider>
   );
