@@ -19,7 +19,12 @@ export function ProductCard({ image, title, price }: IProduct) {
           {title}
         </ImageContainer>
 
-        <Price>R$ {price.toString().replace(".", ",")}</Price>
+        <Price>
+          {price.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}
+        </Price>
       </InfosContainer>
 
       <ButtonElement width={"100%"} height={"40px"}>
