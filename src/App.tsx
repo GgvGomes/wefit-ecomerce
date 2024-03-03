@@ -1,5 +1,6 @@
 import { ProductsContextProvider } from "@context/products";
 import { Header } from "@organisms/header";
+import { Checkout } from "@templates/checkout";
 import { MainPage } from "@templates/main";
 import { NotFound } from "@templates/not_found";
 import { Products } from "@templates/products";
@@ -15,6 +16,7 @@ function App() {
         {/* <Products /> */}
         {/* <NotFound /> */}
         {/* <PurchaseCompleted /> */}
+        <Checkout />
       </MainPage>
     </ProductsContextProvider>
   );

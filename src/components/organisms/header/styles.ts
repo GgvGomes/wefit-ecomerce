@@ -10,7 +10,7 @@ export const HeaderGrid = styled.div`
 
   margin-bottom: 28px;
 
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   padding: ${({ theme }) => theme.padding};
 `;
