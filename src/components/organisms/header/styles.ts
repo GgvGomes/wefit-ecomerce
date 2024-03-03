@@ -1,3 +1,4 @@
+import { breakPoints } from "@context/styles/breake_points";
 import styled from "styled-components";
 
 export const HeaderGrid = styled.div`
@@ -10,9 +11,12 @@ export const HeaderGrid = styled.div`
 
   margin-bottom: 28px;
 
-  /* border: 1px solid red; */
-
   padding: ${({ theme }) => theme.padding};
+
+  @media only screen and (max-width: ${breakPoints.sm}px) {
+    padding: 16px 0;
+    margin-bottom: 2px;
+  }
 `;
 
 export const Title = styled.h1`

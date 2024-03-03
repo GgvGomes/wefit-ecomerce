@@ -1,3 +1,4 @@
+import { breakPoints } from "@context/styles/breake_points";
 import styled from "styled-components";
 
 export const MyCarGrid = styled.div`
@@ -12,6 +13,10 @@ export const MyCarGrid = styled.div`
     &:hover {
       scale: 1.1;
     }
+  }
+
+  @media only screen and (max-width: ${breakPoints.sm}px) {
+    gap: 16px;
   }
 `;
 
@@ -33,6 +38,10 @@ export const SpanCar = styled.span`
 
   &:hover {
     scale: 1.05;
+  }
+
+  @media only screen and (max-width: ${breakPoints.sm}px) {
+    display: none;
   }
 `;
 

@@ -1,3 +1,4 @@
+import { breakPoints } from "@context/styles/breake_points";
 import styled from "styled-components";
 
 export const MainPage = styled.div`
@@ -14,5 +15,13 @@ export const MainPage = styled.div`
   background-color: #2f2e41;
 
   overflow: auto;
+
+  @media only screen and (max-width: ${breakPoints.lg}px) {
+    padding: 0 1vw;
+  }
+  
+  @media only screen and (max-width: ${breakPoints.sm}px) {
+    padding: 0 4vw;
+  }
 `;
 

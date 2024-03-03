@@ -1,3 +1,4 @@
+import { breakPoints } from "@context/styles/breake_points";
 import styled from "styled-components";
 
 export const Card = styled.div`
@@ -16,6 +17,14 @@ export const Card = styled.div`
   justify-content: center;
 
   text-align: center;
+
+  @media only screen and (max-width: ${breakPoints.lg}px) {
+    width: calc((100% - 32px) / 2);
+  }
+
+  @media only screen and (max-width: ${breakPoints.sm}px) {
+    width: 100%;
+  }
 `;
 
 export const InfosContainer = styled.div`
