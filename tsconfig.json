@@ -20,7 +20,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     
-    "types": ["node"],
+    "types": ["node", "module"],
     "baseUrl": "./",
     "paths": {
       "@atoms/*": ["src/components/atoms/*"],

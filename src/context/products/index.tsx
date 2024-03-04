@@ -76,7 +76,8 @@ export const ProductsContextProvider = ({ children }: React.PropsWithChildren) =
   useEffect(() => {
     setIsLoading(true);
 
-    fetch("http://localhost:3000/products")
+    fetch(`http://${window.location.hostname}:8390/products`)
+    // fetch(`http://${window.location.host}/products`)
       .then((response) => response.json())
       .then((data) => {
         setProducts(data);
