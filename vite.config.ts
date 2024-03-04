@@ -11,8 +11,6 @@ export default defineConfig({
 
   resolve: {
     alias: [
-      // { find: "@assets/*", replacement: resolve(__dirname, "src/assets/*") },
-
       {
         find: "@atoms/*",
         replacement: resolve(__dirname, "src/components/atoms/*"),
@@ -29,7 +27,7 @@ export default defineConfig({
         find: "@templates",
         replacement: resolve(__dirname, "src/components/templates"),
       },
-      
+
       {
         find: "@context",
         replacement: resolve(__dirname, "src/context"),
@@ -39,7 +37,6 @@ export default defineConfig({
         find: "@icons",
         replacement: resolve(__dirname, "src/assets/icons"),
       },
-      
     ],
   },
 });
